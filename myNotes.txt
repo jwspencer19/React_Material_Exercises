@@ -1,0 +1,76 @@
+Based on Youtube training videos:
+
+Learn React & Material UI
+https://www.youtube.com/watch?v=HjToX1WWE3w
+
+Instructor solution:
+https://codesandbox.io/s/7j9krpx9l1
+https://github.com/alex996/react-exercises
+
+Learn React & Material UI - #18 Refactoring
+https://www.youtube.com/watch?v=e_4weGPhx84
+Left off at: 9:38 / 19:03
+
+Initially created app using
+https://codesandbox.io/s/gracious-neumann-jt6xn
+
+
+
+Learn React & Material UI - #18 Refactoring
+https://www.youtube.com/watch?v=e_4weGPhx84
+
+# install JavaScript Standard Style
+npm install standard --global
+
+# install for ECMAScript
+npm install babel-eslint --save-dev
+
+# edit package.json and add:
+   ...
+  "standard": {
+    "parser": "babel-eslint"
+  },
+  ...
+
+# check code
+standard
+
+# fix the warnings
+standard --fix
+
+# check for outdated packages that should be upgraded
+npm outdated
+
+# upgrade to the latest - this didn't seem to work
+npm upgrade --latest
+
+# above didn't seem to work, so I manually updated package.json, deleted node_modules, and ran npm install
+
+
+Disabled custom theming. To reenable:
+
+-Find in path color='secondary'
+change secondary to primary
+
+- src\index.js
+comment out:
+const theme = createMuiTheme({
+  palette: {
+    primary: red,
+    secondary: {
+      main: amber.A400,
+      light: amber[200],
+      dark: amber[700]
+    },
+    type: 'dark'
+  },
+  spacing: 10
+})
+
+uncomment out:
+// const theme = createMuiTheme();
+
+- Footer.js: <Tabs> commented out version specifying indicator and text colors
+
+
+
